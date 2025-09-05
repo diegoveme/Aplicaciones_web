@@ -8,4 +8,10 @@ public class Consultar {
         this.accountNumber = accountNumber;
         this.balance = balance;
     }
+    
+    public void execute() {
+        System.out.println("Client: " + clientName);
+        System.out.println("Account: " + accountNumber);
+        System.out.println("Balance: $" + balance);
+    }
 }
