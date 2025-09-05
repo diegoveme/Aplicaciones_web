@@ -23,6 +23,26 @@ public class App {
             int option = scanner.nextInt();
 
             switch (option) {
+                case 1:
+                    System.out.print("Enter deposit amount: ");
+                    double depositAmount = scanner.nextDouble();
+                    Depositar deposit = new Depositar(depositAmount);
+                    balance = deposit.execute(balance);
+                    break;
+                case 2:
+                    System.out.print("Enter withdrawal amount: ");
+                    double withdrawAmount = scanner.nextDouble();
+                    Retirar withdraw = new Retirar(withdrawAmount);
+                    balance = withdraw.execute(balance);
+                    break;
+                case 3:
+                    Consultar consult = new Consultar(name, account, balance);
+                    consult.execute();
+                    break;
+                case 4:
+                    running = false;
+                    System.out.println("Exiting...");
+                    break;
                 default:
                     System.out.println("Invalid option.");
             }
